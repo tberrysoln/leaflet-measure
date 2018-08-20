@@ -62,8 +62,8 @@ L.Control.Measure = L.Control.extend({
     map.on('click', this._collapse, this);
     this._layer = L.layerGroup().addTo(map);
     if (this._import_data.length > 0) {
+      this._resultsModel = null;
       for (let i = 0; i < this._import_data.length; i++) {
-        this._resultsModel = this._import_data[i].lastCoord;
         this._latlngs = this._import_data[i].points;
         this._handleMeasureDoubleClick();
       }
